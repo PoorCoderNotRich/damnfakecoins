@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^create$ ./create.php [L]
+RewriteRule ^managecoins$ ./managecoins.php [L]
+RewriteRule ^change_bictoin_address$ ./change_bictoin_address.php [L]
+RewriteRule ^([a-zA-Z0-9]+)/?$ ./index.php?page=$1
